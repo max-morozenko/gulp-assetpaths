@@ -38,6 +38,18 @@
       captureGroup : 4,
       templateCheck : /(<\s*){0,1}(\bscript)(.*?)\bsrc\s*=\s*/
     },
+       //Add for other attributes
+       // for data-src
+       { exp : /((<\s*){0,1}\bimg)(.*?)\bdata-src\s*=\s*((["{0,1}|'{0,1}]).*?\5)/gi,
+           captureGroup : 4,
+           templateCheck : /(<\s*){0,1}(\bimg)(.*?)\bdata-srcsrc\s*=\s*/
+       }
+       ,
+       // for data-src-retina
+       { exp : /((<\s*){0,1}\bimg)(.*?)\bdata-src-retina\s*=\s*((["{0,1}|'{0,1}]).*?\5)/gi,
+           captureGroup : 4,
+           templateCheck : /(<\s*){0,1}(\bimg)(.*?)\bdata-src-retina\s*=\s*/
+       },
     { exp : /((<\s*){0,1}\bimg)(.*?)\bsrc\s*=\s*((["{0,1}|'{0,1}]).*?\5)/gi,
       captureGroup : 4,
       templateCheck : /(<\s*){0,1}(\bimg)(.*?)\bsrc\s*=\s*/
